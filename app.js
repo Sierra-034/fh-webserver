@@ -9,7 +9,10 @@ app.set('view engine', 'hbs');
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', {
+        nombre: 'Samuel Gómez',
+        titulo: 'Curso de node',
+    });
 });
 
 app.get('/generic', (req, res) => {
